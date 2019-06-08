@@ -35,7 +35,10 @@ Center the molecules' coordinates by finding the center position of all `(x, y, 
 ### Translating coordinates
 
 Translate a molecule using a specific vector `(a, b, c)`. This implies:
-$$x \rightarrow x + a\\y \rightarrow y + b\\z \rightarrow z + c$$
+<center>
+	<img src="https://latex.codecogs.com/svg.latex?\fn_cm&space;\hspace*{-18}&space;x&space;\rightarrow&space;x&space;&plus;&space;a,\newline&space;y&space;\rightarrow&space;y&space;&plus;&space;b,\newline&space;z&space;\rightarrow&space;z&space;&plus;&space;c" title="\hspace*{-18} x \rightarrow x + a,\newline y \rightarrow y + b,\newline z \rightarrow z + c" />
+</center>
+
 ```bash
 >>> from moltransform.transform import translate
 >>> translated_positions = translate(positions_matrix, [a, b, c])
@@ -45,7 +48,10 @@ $$x \rightarrow x + a\\y \rightarrow y + b\\z \rightarrow z + c$$
 ### Scaling coordinates
 
 Scale the molecule along the 3-axis by a vector `(a, b, c)`. This implies:
-$$x \rightarrow ax\\y \rightarrow by\\z \rightarrow cz$$
+<center>
+	<img src="https://latex.codecogs.com/svg.latex?\fn_cm&space;\hspace*{-18}&space;x&space;\rightarrow&space;ax,\newline&space;y&space;\rightarrow&space;by,\newline&space;z&space;\rightarrow&space;cz" title="\hspace*{-18} x \rightarrow ax,\newline y \rightarrow by,\newline z \rightarrow cz" />
+</center>
+
 ```bash
 >>> from moltransform.transform import scale
 >>> scaled_positions = scale(positions_matrix, [a, b, c])

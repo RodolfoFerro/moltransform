@@ -30,7 +30,7 @@ def read_xyz(filename):
 	return p_mat
 
 
-def write_xyz(filename, p_mat):
+def write_xyz(filename, pos_mat):
 	"""Utility function to write a xyz file.
 
 	Parameters
@@ -46,9 +46,9 @@ def write_xyz(filename, p_mat):
 		A numpy ndarray object for a posterior transformation.
 	"""
 	with open(filename, 'w') as xyz:
-		xyz.write("{}\n".format(len(p_mat)))
+		xyz.write("{}\n".format(len(pos_mat)))
 		xyz.write("\n")
-		for line in range(len(p_mat)):
+		for line in range(len(pos_mat)):
 			xyz.write("C\t\t {: .5f}\t {: .5f}\t {: .5f}\n".format(
-				p_mat[line, 0], p_mat[line, 1], p_mat[line, 2]))
+				pos_mat[line, 0], pos_mat[line, 1], pos_mat[line, 2]))
 	return
